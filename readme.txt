@@ -15,13 +15,7 @@ Dynamically add multiple featured image or post thumbnail functionality to your 
 wordpress featured image plugin because there is no need to add code in functions.php file for every featured image. You can contribute to this plugin
 at [Github](https://github.com/ankitpokhrel/Dynamic-Featured-Image "View this plugin in github")
 
-<<<<<<< .mine
-## How it works?
 
-=======
-== How it works? ==
-
->>>>>>> .r776080
 1. After successfull plugin activation go to `add` or `edit` page of posts or pages and you will notice a box for second featured image.
 
    ![Snapshot 1](http://ankitpokhrel.com.np/dfi/snapshot_1.jpg)
@@ -37,6 +31,7 @@ at [Github](https://github.com/ankitpokhrel/Dynamic-Featured-Image "View this pl
 4. After adding featured images click `publish` or `update` to save featured images.
 
 ###### _Note: The featured images are only saved when you publish or update the post._
+
 
 
 ## Retrieving Images in a Theme
@@ -77,11 +72,6 @@ array
   2 => ...
 `
 
-== Installation ==
-
- 1. Unzip and upload the dynamic-featured-images directory to the plugin directory (/wp-content/plugins/) or install it from Plugins->Add New->Upload.
- 2. Activate the plugin through the Plugins menu in WordPress.
-
 == Frequently Asked Questions ==
 
 You can always contact me at `ankitpokhrel@gmail.com`, if you have any question or queries about the project. 
@@ -90,13 +80,7 @@ I am available for freelance work too.
 Please feel free to report any bug found at https://github.com/ankitpokhrel/Dynamic-Featured-Image/ or `ankitpokhrel@gmail.com`.
 
  == Screenshots == 
-<<<<<<< .mine
- 1. New featured image box
- 2. Selecting image from media upload box
- 3. Adding new featured image box
-=======
->>>>>>> .r776080
-
+ 3. Screenshot 3
  == Changelog == 
  = 1.0.3 =
 * First stable version with minimum features released.
