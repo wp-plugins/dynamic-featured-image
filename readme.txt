@@ -15,13 +15,6 @@ Dynamically add multiple featured image or post thumbnail functionality to your 
 wordpress featured image plugin because there is no need to add code in functions.php file for every featured image. You can contribute to this plugin
 at [Github](https://github.com/ankitpokhrel/Dynamic-Featured-Image "View this plugin in github")
 
-
-== Installation ==
-
- 1. Unzip and upload the dynamic-featured-images directory to the plugin directory (/wp-content/plugins/) or install it from Plugins->Add New->Upload
- 2. Activate the plugin through the Plugins menu in WordPress.
-
-
 == How it works? ==
 
 1. After successfull plugin activation go to `add` or `edit` page of posts or pages and you will notice a box for second featured image.
@@ -79,6 +72,11 @@ array
   2 => ...
 `
 
+== Installation ==
+
+ 1. Unzip and upload the dynamic-featured-images directory to the plugin directory (/wp-content/plugins/) or install it from Plugins->Add New->Upload.
+ 2. Activate the plugin through the Plugins menu in WordPress.
+
 == Frequently Asked Questions ==
 
 You can always contact me at `ankitpokhrel@gmail.com`, if you have any question or queries about the project. 
@@ -87,9 +85,6 @@ I am available for freelance work too.
 Please feel free to report any bug found at https://github.com/ankitpokhrel/Dynamic-Featured-Image/ or `ankitpokhrel@gmail.com`.
 
  == Screenshots == 
- 1. Screenshot 1
- 2. Screenshot 2
- 3. Screenshot 3
 
  == Changelog == 
  = 1.0.3 =
