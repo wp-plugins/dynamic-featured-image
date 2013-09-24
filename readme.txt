@@ -12,8 +12,10 @@ Dynamically adds multiple featured image (post thumbnail) functionality to posts
 
 == Description ==
 Dynamically add multiple featured image or post thumbnail functionality to your page, posts and custom post types. This plugin is unique from other
-wordpress featured image plugin because there is no need to add code in functions.php file for every featured image. You can contribute to this plugin
-at [Github](https://github.com/ankitpokhrel/Dynamic-Featured-Image "View this plugin in github")
+wordpress featured image plugin because there is no need to add code in functions.php file for every featured image. 
+
+If you'd like to check out the code and contribute, join us on [Github](https://github.com/ankitpokhrel/Dynamic-Featured-Image "View this plugin in github"). 
+Pull requests, issues, and plugin recommendations are more than welcome!
 
 [Detailed documentation here](https://github.com/ankitpokhrel/Dynamic-Featured-Image "Click here for documentation")
 
