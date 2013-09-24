@@ -9,17 +9,31 @@ jQuery(document).ready(function($){
 	/*
 	 * Add new meta box
 	 */
-	$(document).on('click', '.dfiAddNew', function(){	   
-		var id = parseInt( $('.featured-meta-box:last').find('.dfiAddNew').attr('data-id') );     
-                
-        var newMetaBox = $(this).closest('.featured-meta-box').clone();     
-        newMetaBox.find('.hndle span').html('Featured Image ' + ++id);
-        newMetaBox.find('.handlediv').addClass('dfiDynamicBox');
-        newMetaBox.find('.dfiAddNew').attr('data-id', id);
-        newMetaBox.find('input').val('');
-        newMetaBox.attr('id', 'dfiFeaturedMetaBox' + "-" + id);
-        newMetaBox.find('img').attr('src', '');
-        newMetaBox.appendTo($(this).closest('.featured-meta-box').parent());    
+	$(document).on('click', '.dfiAddNew', function(){	   		
+       var obj = $(this);
+       var id = parseInt( $('.featured-meta-box:last').find('.dfiAddNew').attr('data-id') );
+       
+       var newMetaBox = obj.closest('.featured-meta-box').clone();
+       newMetaBox.find('.hndle span').html('Featured Image ' + ++id);
+       newMetaBox.attr('id', 'dfiFeaturedMetaBox' + "-" + id);
+       newMetaBox.find('.handlediv').addClass('dfiDynamicBox');
+       
+       var metaBoxContentObj = newMetaBox.find('.inside');
+       metaBoxContentObj.html('');
+       
+       obj.append('<img src="images/wpspin_light.gif" class="dfiLoading">').hide().fadeIn(200);
+       $.ajax({
+          type: 'POST',  
+          url: 'admin-ajax.php',  
+          data: { action: 'dfiMetaBox_callback', id: id },  
+          success: function(response){
+            metaBoxContentObj.append(response);
+            newMetaBox.appendTo( obj.closest('.featured-meta-box').parent() );
+            
+            obj.parent().find('.dfiLoading').fadeOut(300, function(){ $(this).remove(); });
+          }
+       });
+       
 	});
 	
 	/*
@@ -39,6 +53,9 @@ jQuery(document).ready(function($){
 		return false;
 	});
 	 
+	/*
+	 * Allow access to media uploader
+	 */
 	window.send_to_editor = function(html){
 		var fullSize = $('img', html).parent().attr('href');		
 		var imgurl = $('img', html).attr('src');
@@ -59,7 +76,7 @@ jQuery(document).ready(function($){
 		var dfiFeaturedImages = [imgUrlTrimmed, fullUrlTrimmed];
 			
 		featuredBox.find('img').attr('src', imgurl).fadeIn(200);
-		featuredBox.find('input').val(dfiFeaturedImages);
+		featuredBox.find('input.dfiImageHolder').val(dfiFeaturedImages);
 		tb_remove();
 	}
 	

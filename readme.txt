@@ -33,7 +33,11 @@ Please feel free to report any bug found at https://github.com/ankitpokhrel/Dyna
 2. Selecting image from media box.
 3. Add new featured image box.
 
-== Changelog == 
+== Changelog ==
+= 1.1.0 =
+* Major security update
+* Now uses AJAX to create new featured box
+ 
 = 1.0.3 =
 * First stable version with minimum features released.
 * Fixed bug for duplicate id.
