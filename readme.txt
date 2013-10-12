@@ -14,15 +14,13 @@ Dynamically adds multiple featured image (post thumbnail) functionality to posts
 Dynamically add multiple featured image or post thumbnail functionality to your page, posts and custom post types. This plugin is unique from other
 wordpress featured image plugin because there is no need to add code in functions.php file for every featured image. 
 
-**Overview**
-
+**Overview**  
 Dynamic Featured Image enables the option to have MULTIPLE featured images within a post or page. 
 This is especially helpful when you use other plugins, post thumbnails or sliders that use featured images. 
 Why limit yourself to only one featured image if you can do some awesome stuffs with multiple featured image? 
 DFI allows you to add different number of featured images to each post and page that can be collected by the various theme functions.
 
-**How it works?**
-
+**How it works?**  
 1. After successfull plugin activation go to `add` or `edit` page of posts or pages and you will notice a box for second featured image.
 2. Click `Set featured image`, select required image from media popup and click `Insert into Post`.
 3. Click on `Add New` to add new featured image or use `Remove` link to remove the featured image box.
@@ -41,12 +39,10 @@ array
   2 => ...
 `
 
-**Extended Documentation**
-
+**Extended Documentation**  
 [Click here](https://github.com/ankitpokhrel/Dynamic-Featured-Image "Click here for documentation") for detail documentation.
 
-**Contribute**
-
+**Contribute**  
 If you'd like to check out the code and contribute, join us on [Github](https://github.com/ankitpokhrel/Dynamic-Featured-Image "View this plugin in github"). 
 Pull requests, issues, and plugin recommendations are more than welcome!
 
