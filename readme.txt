@@ -21,10 +21,10 @@ Why limit yourself to only one featured image if you can do some awesome stuffs 
 DFI allows you to add different number of featured images to each post and page that can be collected by the various theme functions.
 
 **How it works?**  
-1. After successfull plugin activation go to `add` or `edit` page of posts or pages and you will notice a box for second featured image.
-2. Click `Set featured image`, select required image from media popup and click `Insert into Post`.
-3. Click on `Add New` to add new featured image or use `Remove` link to remove the featured image box.
-4. You can then get the images by calling the function  `dfiGetFeaturedImages([$postId (optional)])` in your theme.
+1. After successfull plugin activation go to `add` or `edit` page of posts or pages and you will notice a box for second featured image.  
+2. Click `Set featured image`, select required image from media popup and click `Insert into Post`.  
+3. Click on `Add New` to add new featured image or use `Remove` link to remove the featured image box.  
+4. You can then get the images by calling the function  `dfiGetFeaturedImages([$postId (optional)])` in your theme.  
 5. The data will be returned in the following format.
 `
 array
@@ -50,7 +50,7 @@ Pull requests, issues, and plugin recommendations are more than welcome!
 
 1. Unzip and upload the `dynamic-featured-images` directory to the plugin directory (`/wp-content/plugins/`) or install it from `Plugins->Add New->Upload`.
 2. Activate the plugin through the `Plugins` menu in WordPress.
-3. If you don't see new featured image box, click `Screen Options` in the upper right corner of your wordpress admin and make sure that the `Featured Image 2` box is slected.
+3. If you don't see new featured image box, click `Screen Options` in the upper right corner of your wordpress admin and make sure that the `Featured Image 2` box is selected.
 
 == Frequently Asked Questions ==
 = 1. The media uploader screen freezes and stays blank after clicking insert into post? =
