@@ -1,0 +1,30 @@
+.dfiAddNew {
+	float: left;
+}
+
+.dfiRemove {
+    float: right;
+}
+
+.dfiClearFloat {
+    clear: both;
+}
+
+.featured-meta-box a {
+    display: inline-block;
+    margin: 3px 0;
+}
+
+img.dfiImg {
+	max-width: 258px;	
+}
+
+img.dfiImgEmpty {
+	display: none;
+}
+
+.dfiLoading {
+    position: relative;
+    top: 3px;
+    left: 5px;
+}
