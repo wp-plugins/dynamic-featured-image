@@ -26,9 +26,12 @@ jQuery(document).ready(function($){
           type: 'POST',  
           url: 'admin-ajax.php',  
           data: { action: 'dfiMetaBox_callback', id: id },  
-          success: function(response){
+          success: function(response){            
             metaBoxContentObj.append(response);
             newMetaBox.appendTo( obj.closest('.featured-meta-box').parent() );
+            
+            //Add post id
+            newMetaBox.find('.dfiFeaturedImage').attr('data-post-id', obj.parent().parent().find('.dfiFeaturedImage').attr('data-post-id') );
             
             obj.parent().find('.dfiLoading').fadeOut(300, function(){ $(this).remove(); });
           }
@@ -47,43 +50,57 @@ jQuery(document).ready(function($){
 	/*
 	 * Select featured image from media library
 	 */
+	
+	var restore_send_to_editor = "";
 	$(document).on('click', '.dfiFeaturedImage', function() {		
 		current = $(this);
-		tb_show('', 'media-upload.php?type=image&amp;TB_iframe=true');
+		
+		var post_id = current.attr('data-post-id');
+		
+		restore_send_to_editor = window.send_to_editor;
+		if( null != current){
+		    media_uploader();
+		    tb_show('', 'media-upload.php?post_id=' + post_id + '&amp;type=image&amp;TB_iframe=true');
+		}
 		return false;
 	});
 	 
 	/*
 	 * Allow access to media uploader
 	 */
-	window.send_to_editor = function(html){
-		var fullSize = $('img', html).parent().attr('href');		
-		var imgurl = $('img', html).attr('src');
-		
-		imgUrlTrimmed = imgurl.split('wp-content');
-		imgUrlTrimmed = '/wp-content' + imgUrlTrimmed[1];
-		
-		fullUrlTrimmed = fullSize.split('wp-content');
-		fullUrlTrimmed = '/wp-content' + fullUrlTrimmed[1];
-		
-		var featuredBox = current.parent();
-		
-		featuredBox.find('.fImg').attr({
-			'src': imgurl,
-			'data-src': fullSize
-		});
-			
-		var dfiFeaturedImages = [imgUrlTrimmed, fullUrlTrimmed];
-			
-		featuredBox.find('img').attr('src', imgurl).fadeIn(200);
-		featuredBox.find('input.dfiImageHolder').val(dfiFeaturedImages);
-		tb_remove();
-	}
-	
+    function media_uploader(){
+       	window.send_to_editor = function(html){	    
+	   
+    		var fullSize = $('img', html).parent().attr('href');		
+    		var imgurl = $('img', html).attr('src');
+    		
+    		imgUrlTrimmed = imgurl.split('wp-content');
+    		imgUrlTrimmed = '/wp-content' + imgUrlTrimmed[1];
+    		
+    		fullUrlTrimmed = fullSize.split('wp-content');
+    		fullUrlTrimmed = '/wp-content' + fullUrlTrimmed[1];
+    		
+    		var featuredBox = current.parent();
+    		
+    		featuredBox.find('.fImg').attr({
+    			'src': imgurl,
+    			'data-src': fullSize
+    		});
+    			
+    		var dfiFeaturedImages = [imgUrlTrimmed, fullUrlTrimmed];
+    			
+    		featuredBox.find('img').attr('src', imgurl).fadeIn(200);
+    		featuredBox.find('input.dfiImageHolder').val(dfiFeaturedImages);
+    		tb_remove();
+    		window.send_to_editor = restore_send_to_editor;
+	 } 
+   }
+   
 	/*
 	 * Enable toggle of dynamically generated featured box
 	 */
 	$(document).on('click', '.dfiDynamicBox', function(){
 	    $(this).parent().toggleClass('closed');
 	});
+	
 });

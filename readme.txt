@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: dynamic featured image, featured image, post thumbnail, dynamic post thumbnail, multiple featured image, multiple post thumbnail
 Requires at least: 3.3
 Tested up to: 3.6.1
-Stable tag: 1.1.2
+Stable tag: 1.1.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -24,7 +24,7 @@ DFI allows you to add different number of featured images to each post and page 
 1. After successfull plugin activation go to `add` or `edit` page of posts or pages and you will notice a box for second featured image.  
 2. Click `Set featured image`, select required image from media popup and click `Insert into Post`.  
 3. Click on `Add New` to add new featured image or use `Remove` link to remove the featured image box.  
-4. You can then get the images by calling the function  `dfiGetFeaturedImages([$postId (optional)])` in your theme.  
+4. You can then get the images by calling the function  `dfiGetFeaturedImages([$postId (optional)])` in your theme. ([Click here for details](https://github.com/ankitpokhrel/Dynamic-Featured-Image/tree/v1.1.5 "Documentation for ver. 1.1.5"))  
 5. The data will be returned in the following format.
 `
 array
@@ -40,7 +40,13 @@ array
 `
 
 **Extended Documentation**  
-[Click here](https://github.com/ankitpokhrel/Dynamic-Featured-Image "Click here for documentation") for detail documentation.
+[Click here](https://github.com/ankitpokhrel/Dynamic-Featured-Image/tree/v1.1.5 "Documentation for ver. 1.1.5") for detail documentation of ver. 1.1.5.
+
+**MultiSite Info**  
+You can use `Network Activate` to activate plugin for all sites on a single install. It is only available on the Network admin site not anywhere else. 
+Simple `Activate` activates for the site you are currently on. These will be permitted to be activated or deactivated on ANY blog.
+
+While deleting the plugin from the `Network` be sure that the plugin is deactive in all installation of your WordPress network.
 
 **Contribute**  
 If you'd like to check out the code and contribute, join us on [Github](https://github.com/ankitpokhrel/Dynamic-Featured-Image "View this plugin in github"). 
@@ -54,14 +60,17 @@ Pull requests, issues, and plugin recommendations are more than welcome!
 
 == Frequently Asked Questions ==
 = 1. The media uploader screen freezes and stays blank after clicking insert into post? =
-The problem is usually due to the conflicts with other plugin or theme. You can use general debugging technique to find out the problem.
+The problem is usually due to the conflicts with other plugin or theme functions. You can use general debugging technique to find out the problem.
 
-1. Switch to the default wordpress theme to rule out any theme-specific problems.
-2. Try the plugin in a fresh new WordPress installation.
-3. If it works, deactivate all plugins from your current wordpress installation to see if this resolves the problem. If this works, re-activate the plugins one by one until you find the problematic plugin(s).
-4. [Resetting the plugins folder](http://www.google.com/url?q=http%3A%2F%2Fcodex.wordpress.org%2FFAQ_Troubleshooting%23How_to_deactivate_all_plugins_when_not_able_to_access_the_administrative_menus.3F&sa=D&sntz=1&usg=AFQjCNFaei9nyiMZe2yZQUBBA_MghJ-Wxw) by FTP or PhpMyAdmin. Sometimes, an apparently inactive plugin can still cause problems.
+i. Switch to the default wordpress theme to rule out any theme-specific problems.  
+ii. Try the plugin in a fresh new WordPress installation.  
+iii. If it works, deactivate all plugins from your current wordpress installation to see if this resolves the problem. If this works, re-activate the plugins one by one until you find the problematic plugin(s).  
+iv. [Resetting the plugins folder](http://www.google.com/url?q=http%3A%2F%2Fcodex.wordpress.org%2FFAQ_Troubleshooting%23How_to_deactivate_all_plugins_when_not_able_to_access_the_administrative_menus.3F&sa=D&sntz=1&usg=AFQjCNFaei9nyiMZe2yZQUBBA_MghJ-Wxw) by FTP or PhpMyAdmin. Sometimes, an apparently inactive plugin can still cause problems.
 
-= Other problems or questions? =
+= 2. There is no additional image on the page when I save it or publish it? =
+This happens when there is any problem in saving you post or page properly. For example if you try to save or publish the post without the post title the featured images may not be saved properly.
+
+= 3. Other problems or questions? =
 You can always contact me at `ankitpokhrel@gmail.com`, if you have any question or queries about the project. 
 I am available for freelance work too.
 
@@ -73,6 +82,11 @@ Please feel free to report any bug found at https://github.com/ankitpokhrel/Dyna
 3. Add new featured image box.
 
 == Changelog ==
+= 1.1.5 =
+* Fixed PHP Notice issues in strict debugging mode (Issue #4 in GitHub, Thanks to @Micky Hulse).
+* Added post id in media upload box.
+* Enhanced MultiSite Support.
+
 = 1.1.2 =
 * Resolved media uploader conflicts.
 
