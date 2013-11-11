@@ -3,8 +3,8 @@ Contributors: ankitpokhrel
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=J9FVY3ESPPD58
 Tags: dynamic featured image, featured image, post thumbnail, dynamic post thumbnail, multiple featured image, multiple post thumbnail
 Requires at least: 3.3
-Tested up to: 3.7
-Stable tag: 2.0.0
+Tested up to: 3.7.1
+Stable tag: 2.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,8 +41,9 @@ array
   2 => ...
 `
 
-**Extended Documentation**  
-[Click here](https://github.com/ankitpokhrel/Dynamic-Featured-Image/wiki "Documentation for current ver.") for detail documentation.
+**Resources**  
+1. [Detail Documentation](https://github.com/ankitpokhrel/Dynamic-Featured-Image/wiki "Documentation for current ver.").  
+2. [DFI Blog](http://ankitpokhrel.com.np/blog/category/dynamic-featured-image/ "DFI Blog").
 
 **MultiSite Info**  
 You can use `Network Activate` to activate plugin for all sites on a single install. It is only available on the Network admin site not anywhere else. 
@@ -80,7 +81,13 @@ This happens when there is any problem in saving you post or page properly. For 
 Yes, from ver. 2.0.0 you can now add images from the remote url. However the helper functions may not work properly. 
 Alt, caption and title attribute for these images cannot be retrieved using helper functions for now. `NULL` is returned instead.
 
-= 4. Other problems or questions? =
+= 4. I am seeing a broken image icon when setting the second feature image? =
+Some plugins like `Regenerate Thumbnails` changes the default image format in media uploader from `File URL` to `Attachment Post URL`. 
+Make sure you click on `File URL` under `Link URL` section before clicking `Insert Into Post`.
+
+= 5. Other problems or questions? =
+Other problems? Don't forget to check the [blog](http://ankitpokhrel.com.np/blog/category/dynamic-featured-image/) and learn to create some exciting things using DFI.
+
 You can always contact me at `ankitpokhrel@gmail.com`, if you have any question or queries about the project. 
 I am available for freelance work too.
 
@@ -88,10 +95,13 @@ Please feel free to report any bug found at https://github.com/ankitpokhrel/Dyna
 
 == Screenshots == 
 1. New featured image box.
-2. Selecting image from media box.
+2. Selecting image from media box. Make sure you select `File URL` in `Link URL` section before clicking `Insert Into Post`.
 3. Add new featured image box.
 
 == Changelog ==
+= 2.0.1 =
+* Change in design.
+
 = 2.0.0 =
 * Now with various helper functions.
 * Helpers to retrieve alt, title and caption of each featured image.
@@ -121,6 +131,8 @@ Please feel free to report any bug found at https://github.com/ankitpokhrel/Dyna
 * Fixed some minor issues.
 
 == Upgrade Notice ==
+= 2.0.1 =
+This version has just some graphics change to make it more attractive.
 
 = 2.0.0 =
 This version has some major updates and is much more powerful than before. Read the documentation carefully before update.

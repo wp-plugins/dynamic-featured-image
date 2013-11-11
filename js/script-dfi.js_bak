@@ -106,18 +106,42 @@ jQuery(document).ready(function($){
     		}
     		
     		var featuredBox = current.parent();    		
+    		var attachment_id = getURLParameter(fullSize, 'attachment_id');    		    		
+    		console.log(attachment_id);
+    		if( typeof attachment_id != null ){
+    		   $.ajax({
+                  type: 'POST',  
+                  url: 'admin-ajax.php',
+                  dataType: 'JSON',
+                  data: { action: 'dfiGetUrlFromId_callback', attachment_id: attachment_id },  
+                  success: function(response) {                    
+                    featuredBox.find('.dfiFeaturedImage').addClass('hasFeaturedImage');
+                
+                    var imgUrl = response.imgThumb;
+                    var fullSize = response.imgFull; 
+                    
+                    imgUrlTrimmed = imgUrl.split('wp-content');
+                    imgUrlTrimmed = '/wp-content' + imgUrlTrimmed[1];
+                    
+                    fullUrlTrimmed = fullSize.split('wp-content');
+                    fullUrlTrimmed = '/wp-content' + fullUrlTrimmed[1];
+                
+                    var dfiFeaturedImages = [imgUrlTrimmed, fullUrlTrimmed];
+                    
+                    featuredBox.find('img').attr('src', imgUrl).fadeIn(200);
+                    featuredBox.find('input.dfiImageHolder').val(dfiFeaturedImages);
+                  }
+               });
+    		} else {  		    		
     		
-    		featuredBox.find('.fImg').attr({
-    			'src': imgUrl,
-    			'data-src': fullSize
-    		});
+        		featuredBox.find('.dfiFeaturedImage').addClass('hasFeaturedImage');
+        			
+        		var dfiFeaturedImages = [imgUrlTrimmed, fullUrlTrimmed];
+        		
+        		featuredBox.find('img').attr('src', imgUrl).fadeIn(200);
+        		featuredBox.find('input.dfiImageHolder').val(dfiFeaturedImages);
+    		}
     		
-    		featuredBox.find('.dfiFeaturedImage').addClass('hasFeaturedImage');
-    			
-    		var dfiFeaturedImages = [imgUrlTrimmed, fullUrlTrimmed];
-    		
-    		featuredBox.find('img').attr('src', imgUrl).fadeIn(200);
-    		featuredBox.find('input.dfiImageHolder').val(dfiFeaturedImages);
     		tb_remove();
     		window.send_to_editor = restore_send_to_editor;
 	 } 
@@ -146,3 +170,9 @@ jQuery(document).ready(function($){
 	    }
 	}, '.featured-meta-box .inside');
 });
+
+function getURLParameter(url, name) {
+    return decodeURIComponent(
+        (url.match(RegExp("[?|&]"+name+'=(.+?)(&|$)'))||[,null])[1]
+    );  
+}
