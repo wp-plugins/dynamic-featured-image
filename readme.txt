@@ -85,7 +85,10 @@ Alt, caption and title attribute for these images cannot be retrieved using help
 Some plugins like `Regenerate Thumbnails` changes the default image format in media uploader from `File URL` to `Attachment Post URL`. 
 Make sure you click on `File URL` under `Link URL` section before clicking `Insert Into Post`.
 
-= 5. Other problems or questions? =
+= 5. I cannot add or change secondary featured images after update? =
+This usually happens because of cache. Clear all your cache and try again if you are having this problem. If you still have such problem you can get help through support forum.
+
+= 6. Other problems or questions? =
 Other problems? Don't forget to check the [blog](http://ankitpokhrel.com.np/blog/category/dynamic-featured-image/) and learn to create some exciting things using DFI.
 
 You can always contact me at `ankitpokhrel@gmail.com`, if you have any question or queries about the project. 
@@ -132,7 +135,7 @@ Please feel free to report any bug found at https://github.com/ankitpokhrel/Dyna
 
 == Upgrade Notice ==
 = 2.0.1 =
-This version has just some graphics change to make it more attractive.
+This version has just some graphics change to make it more attractive. Please clear the cache after update.
 
 = 2.0.0 =
 This version has some major updates and is much more powerful than before. Read the documentation carefully before update.
