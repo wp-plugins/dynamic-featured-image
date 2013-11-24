@@ -11,7 +11,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Dynamically adds multiple featured image (post thumbnail) functionality to posts, pages and custom post types.
 
 == Description ==
-Dynamically adds multiple featured image or post thumbnail functionality to your page, posts and custom post types. This plugin is unique from other
+Dynamically adds multiple featured image or multiple post thumbnail functionality to your page, posts and custom post types. This plugin is unique from other
 wordpress featured image plugin because there is no need to add code in functions.php file for every featured image. 
 
 **Overview**  
