@@ -91,8 +91,8 @@ This usually happens because of cache. Clear all your cache and try again if you
 = 6. Other problems or questions? =
 Other problems? Don't forget to check the [blog](http://ankitpokhrel.com.np/blog/category/dynamic-featured-image/) and learn to create some exciting things using DFI.
 
-You can always contact me at `ankitpokhrel@gmail.com`, if you have any question or queries about the project. 
-I am available for freelance work too.
+Please use [support forum](http://wordpress.org/support/plugin/dynamic-featured-image) first if you have any question or queries about the project. 
+If you don't receive any help in support forum then you can directly contact me at `ankitpokhrel@gmail.com`. Please atleast wait for 48hrs before sending another request.
 
 Please feel free to report any bug found at https://github.com/ankitpokhrel/Dynamic-Featured-Image/ or `ankitpokhrel@gmail.com`.
 
