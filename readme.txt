@@ -102,6 +102,9 @@ Please feel free to report any bug found at https://github.com/ankitpokhrel/Dyna
 3. Add new featured image box.
 
 == Changelog ==
+= 2.0.2 =
+Minor css fix, issue #18
+
 = 2.0.1 =
 * Change in design.
 
@@ -135,7 +138,7 @@ Please feel free to report any bug found at https://github.com/ankitpokhrel/Dyna
 
 == Upgrade Notice ==
 = 2.0.2 =
-Minor css fix, issue #18
+This version has some minor css fix. Issue #18 in github.
 
 = 2.0.1 =
 This version has just some graphics change to make it more attractive. Please clear the cache after update.
