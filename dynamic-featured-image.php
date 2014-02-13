@@ -3,7 +3,7 @@
  * Plugin Name: Dynamic Featured Image
  * Plugin URI: http://wordpress.org/plugins/dynamic-featured-image/
  * Description: Dynamically adds multiple featured image or post thumbnail functionality to your posts, pages and custom post types.
- * Version: 2.0.1
+ * Version: 2.0.2
  * Author: Ankit Pokhrel
  * Author URI: http://ankitpokhrel.com.np
  */
@@ -25,7 +25,7 @@
    along with this program.  If not, see <http://www.gnu.org/licenses/>.
   */
  
- define('DYNAMIC_FEATURED_IMAGE_VERSION', '2.0.1');
+ define('DYNAMIC_FEATURED_IMAGE_VERSION', '2.0.2');
  define('DOCUMENTATION_PAGE', 'https://github.com/ankitpokhrel/Dynamic-Featured-Image/wiki');
 
  //prevent direct access
