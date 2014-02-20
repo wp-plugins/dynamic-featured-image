@@ -82,7 +82,7 @@ If you need to add images from the remote url you need to switch back to ver. 2.
 Note: If you are using remote url to use the feature image, the helper functions may not work properly. 
 Alt, caption and title attribute for these images cannot be retrieved using helper functions. `NULL` is returned instead.
 
-= 4. I am seeing a broken image icon when setting the second feature image? [ for ver. @lt;= 2.0.2 ] =
+= 4. I am seeing a broken image icon when setting the second feature image? [ for ver. 2.0.2 and below ] =
 Some plugins like `Regenerate Thumbnails` changes the default image format in media uploader from `File URL` to `Attachment Post URL`. 
 Make sure you click on `File URL` under `Link URL` section before clicking `Insert Into Post`.
 
