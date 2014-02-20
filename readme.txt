@@ -1,18 +1,17 @@
 === Dynamic Featured Image ===
-Contributors: ankitpokhrel
+Contributors: ankitpokhrel, cfoellmann
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=J9FVY3ESPPD58
 Tags: dynamic featured image, featured image, post thumbnail, dynamic post thumbnail, multiple featured image, multiple post thumbnail
-Requires at least: 3.3
+Requires at least: 3.5
 Tested up to: 3.8.1
-Stable tag: 2.0.2
+Stable tag: 3.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Dynamically adds multiple featured image (post thumbnail) functionality to posts, pages and custom post types.
 
 == Description ==
-Dynamically adds multiple featured image or multiple post thumbnail functionality to your page, posts and custom post types. This plugin is unique from other
-wordpress featured image plugin because there is no need to add code in functions.php file for every featured image. 
+Dynamically adds multiple featured image or multiple post thumbnail functionality to your page, posts and custom post types. This plugin provides you an interface to add any number of featured image as you want without writing a single code. These dynamic featured images can then be collected by the various theme functions.
 
 **Overview**  
 Dynamic Featured Image enables the option to have MULTIPLE featured images within a post or page. 
@@ -22,9 +21,9 @@ DFI allows you to add different number of featured images to each post and page 
 
 **How it works?**  
 1. After successfull plugin activation go to `add` or `edit` page of posts or pages and you will notice a box for second featured image.  
-2. Click `Set featured image`, select required image from media popup and click `Insert into Post`.  
+2. Click `Set featured image`, select required image from "Dynamic Featured Image - Media Selector" popup and click `Set Featured Image`.  
 3. Click on `Add New` to add new featured image or use `Remove` link to remove the featured image box.  
-4. You can then get the images by calling the function  `dfi_get_featured_images([$postId (optional)])` in your theme. ([Click here for details](https://github.com/ankitpokhrel/Dynamic-Featured-Image/wiki "Documentation for current version"))  
+4. You can then get the images by calling the function  `$dynamic_featured_image->get_featured_images([$postId (optional)])` in your theme. ([Click here for details](https://github.com/ankitpokhrel/Dynamic-Featured-Image/wiki "Documentation for current version"))  
 5. The data will be returned in the following format.
 `
 array
@@ -32,12 +31,12 @@ array
     array
       'thumb' => string 'http://your_site/upload_path/yourSelectedImage.jpg' (length=50)
       'full' => string 'http://your_site/upload_path/yourSelectedImage_fullSize.jpg' (length=69)
-	  'attachment_id' => string '197' (length=3)
+	    'attachment_id' => string '197' (length=3)
   1 => 
     array
       'thumb' => string 'http://your_site/upload_path/yourSelectedImage.jpg' (length=50)
       'full' => string 'http://your_site/upload_path/yourSelectedImage_fullSize.jpg' (length=69)
-	  'attachment_id' => string '198' (length=3)
+	    'attachment_id' => string '198' (length=3)
   2 => ...
 `
 
@@ -75,13 +74,15 @@ iii. If it works, deactivate all plugins from your current wordpress installatio
 iv. [Resetting the plugins folder](http://www.google.com/url?q=http%3A%2F%2Fcodex.wordpress.org%2FFAQ_Troubleshooting%23How_to_deactivate_all_plugins_when_not_able_to_access_the_administrative_menus.3F&sa=D&sntz=1&usg=AFQjCNFaei9nyiMZe2yZQUBBA_MghJ-Wxw) by FTP or PhpMyAdmin. Sometimes, an apparently inactive plugin can still cause problems.
 
 = 2. There is no additional image on the page when I save it or publish it? =
-This happens when there is any problem in saving you post or page properly. For example if you try to save or publish the post without the post title the featured images may not be saved properly.
+This happens when there is any problem in saving you post or page properly. For example, if you try to save or publish the post without the post title the featured images may not be saved properly.
 
 = 3. Can i set the image from remote url? =
-Yes, from ver. 2.0.0 you can now add images from the remote url. However the helper functions may not work properly. 
-Alt, caption and title attribute for these images cannot be retrieved using helper functions for now. `NULL` is returned instead.
+If you need to add images from the remote url you need to switch back to ver. 2.0.2 . There is no such feature in ver. 3.0.0 and above.
 
-= 4. I am seeing a broken image icon when setting the second feature image? =
+Note: If you are using remote url to use the feature image, the helper functions may not work properly. 
+Alt, caption and title attribute for these images cannot be retrieved using helper functions. `NULL` is returned instead.
+
+= 4. I am seeing a broken image icon when setting the second feature image? [for ver. <= 2.0.2] =
 Some plugins like `Regenerate Thumbnails` changes the default image format in media uploader from `File URL` to `Attachment Post URL`. 
 Make sure you click on `File URL` under `Link URL` section before clicking `Insert Into Post`.
 
@@ -98,12 +99,19 @@ Please feel free to report any bug found at https://github.com/ankitpokhrel/Dyna
 
 == Screenshots == 
 1. New featured image box.
-2. Selecting image from media box. Make sure you select `File URL` in `Link URL` section before clicking `Insert Into Post`.
+2. Selecting image from media box.
 3. Add new featured image box.
 
 == Changelog ==
+= 3.0.0 =
+* Fully Object Oriented (Thanks to @cfoellmann).
+* New WordPress Media Uploader.
+* Uses dashicons instead of images.
+* Functions to retrieve image descriptions and nth featured image.
+* Well documented.
+
 = 2.0.2 =
-Minor css fix, issue #18
+* Minor css fix (issue #18 in GitHub, Thanks to @cfoellmann)
 
 = 2.0.1 =
 * Change in design.
@@ -137,8 +145,11 @@ Minor css fix, issue #18
 * Fixed some minor issues.
 
 == Upgrade Notice ==
+= 3.0.0 =
+This version has major changes which are not compatible with the previous version of the plugin. The plugin is now fully object oriented.
+
 = 2.0.2 =
-This version has some minor css fix. Issue #18 in github.
+This version has some minor css fix. Issue #18 in GitHub.
 
 = 2.0.1 =
 This version has just some graphics change to make it more attractive. Please clear the cache after update.
