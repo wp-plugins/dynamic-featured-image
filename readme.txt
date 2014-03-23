@@ -23,7 +23,7 @@ DFI allows you to add different number of featured images to each post and page 
 1. After successfull plugin activation go to `add` or `edit` page of posts or pages and you will notice a box for second featured image.  
 2. Click `Set featured image`, select required image from "Dynamic Featured Image - Media Selector" popup and click `Set Featured Image`.  
 3. Click on `Add New` to add new featured image or use `Remove` link to remove the featured image box.  
-4. You can then get the images by calling the function  `$dynamic_featured_image->get_featured_images([$postId (optional)])` in your theme. ([Click here for details](https://github.com/ankitpokhrel/Dynamic-Featured-Image/wiki "Documentation for current version"))  
+4. You can then get the images by calling the function `$dynamic_featured_image->get_featured_images([$postId (optional)])` in your theme. ([Click here for details](https://github.com/ankitpokhrel/Dynamic-Featured-Image/wiki "Documentation for current version"))  
 5. The data will be returned in the following format.
 `
 array
@@ -43,6 +43,7 @@ array
 **Resources**  
 1. [Detail Documentation](https://github.com/ankitpokhrel/Dynamic-Featured-Image/wiki "Documentation for current ver.").  
 2. [DFI Blog](http://ankitpokhrel.com.np/blog/category/dynamic-featured-image/ "DFI Blog").
+3. [StackOverflow Tag](http://stackoverflow.com/questions/tagged/dynamic-featured-image "StackOverflow Tag").
 
 **MultiSite Info**  
 You can use `Network Activate` to activate plugin for all sites on a single install. It is only available on the Network admin site not anywhere else. 
