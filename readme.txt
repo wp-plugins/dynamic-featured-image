@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: dynamic featured image, featured image, post thumbnail, dynamic post thumbnail, multiple featured image, multiple post thumbnail
 Requires at least: 3.5
 Tested up to: 3.8.1
-Stable tag: 3.0.0
+Stable tag: 3.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -103,6 +103,9 @@ Please feel free to report any bug found at https://github.com/ankitpokhrel/Dyna
 3. Add new featured image box.
 
 == Changelog ==
+= 3.0.1 =
+* Fixed several JSLint issues
+
 = 3.0.0 =
 * Fully Object Oriented (Thanks to @cfoellmann).
 * New WordPress Media Uploader.
@@ -145,6 +148,9 @@ Please feel free to report any bug found at https://github.com/ankitpokhrel/Dyna
 * Fixed some minor issues.
 
 == Upgrade Notice ==
+= 3.0.1 =
+This version has fixed various JSLint issues.
+
 = 3.0.0 =
 This version has major changes which are not compatible with the previous version of the plugin. The plugin is now fully object oriented.
 
