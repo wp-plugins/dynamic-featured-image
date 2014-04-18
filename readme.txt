@@ -3,7 +3,7 @@ Contributors: ankitpokhrel, cfoellmann
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=J9FVY3ESPPD58
 Tags: dynamic featured image, featured image, post thumbnail, dynamic post thumbnail, multiple featured image, multiple post thumbnail
 Requires at least: 3.5
-Tested up to: 3.8.1
+Tested up to: 3.9
 Stable tag: 3.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -42,7 +42,7 @@ array
 
 **Resources**  
 1. [Detail Documentation](https://github.com/ankitpokhrel/Dynamic-Featured-Image/wiki "Documentation for current ver.").  
-2. [DFI Blog](http://ankitpokhrel.com.np/blog/category/dynamic-featured-image/ "DFI Blog").
+2. [DFI Blog](http://ankitpokhrel.com.np/blog/category/dynamic-featured-image/ "DFI Blog").  
 3. [StackOverflow Tag](http://stackoverflow.com/questions/tagged/dynamic-featured-image "StackOverflow Tag").
 
 **MultiSite Info**  
