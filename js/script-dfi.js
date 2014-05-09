@@ -7,7 +7,7 @@
     */
     
     jQuery(document).ready(function($){
-    var current = null;	
+    var current = null; 
     
     /*
     * Add new meta box
@@ -52,7 +52,7 @@
     
         if( confirm('Are you sure?') ) {
         
-            var dfiMetaBox = $(this).closest('.featured-meta-box');	
+            var dfiMetaBox = $(this).closest('.featured-meta-box'); 
             var totalMetaBox = $('.featured-meta-box').length;
             
             if( totalMetaBox === 1 ) {
@@ -60,16 +60,15 @@
                 dfiMetaBox.find('.dfiImg').attr('src', '');
                 dfiMetaBox.find('.dfiImageHolder').val('');
                 dfiMetaBox.find('.dfiFeaturedImage')
-                .removeClass('hasFeaturedImage')
-                .show()
-                .animate({ opacity: 1, display: 'inline-block' }, 600);	
+                        .removeClass('hasFeaturedImage')
+                        .show()
+                        .animate({ opacity: 1, display: 'inline-block' }, 600); 
             
             } else {
             
                 dfiMetaBox.fadeOut(500, function(){
-                $(this).remove();
-
-            });
+                    $(this).remove();
+                });
             
             }
             
@@ -80,34 +79,31 @@
     /**
     * Display custom media uploader and
     * allow to select featured image from the media library
-    */	
+    */  
     $(document).on('click', '.dfiFeaturedImage', function() {
     
         current = $(this);
         
-        if( null !== current) {	
+        if( null !== current) { 
         
-        var dfi_uploader = wp.media({
-        
-                title: 'Dynamic Featured Image - Media Selector',
-                button: {
-                text: 'Set Featured Image'
-                },
-                multiple: false,
-        
-        }).on('select', function() {
+            var dfi_uploader = wp.media({
+            
+                    title: 'Dynamic Featured Image - Media Selector',
+                    button: {
+                        text: 'Set Featured Image'
+                    },
+                    multiple: false,
+            
+            }).on('select', function() {
         
                 var attachment = dfi_uploader.state().get('selection').first().toJSON();
-                
                 var fullSize = attachment.url;
                 var imgUrl = (typeof attachment.sizes.thumbnail === "undefined") ? fullSize : attachment.sizes.thumbnail.url;
                 var imgUrlTrimmed, fullUrlTrimmed;
+              
+                imgUrlTrimmed = imgUrl.replace(WP_SPECIFIC.upload_url, "");
                 
-                imgUrlTrimmed = imgUrl.split('wp-content');
-                imgUrlTrimmed = '/wp-content' + imgUrlTrimmed[1];
-                
-                fullUrlTrimmed = fullSize.split('wp-content');
-                fullUrlTrimmed = '/wp-content' + fullUrlTrimmed[1];
+                fullUrlTrimmed = fullSize.replace(WP_SPECIFIC.upload_url, "");
                 
                 var featuredBox = current.parent();
                 
@@ -132,7 +128,7 @@
                 featuredBox.find('img').attr('src', medium).fadeIn(200);
                 featuredBox.find('input.dfiImageHolder').val(dfiFeaturedImages);
             
-            }).open();	
+            }).open();  
         }
         
         return false;
@@ -150,7 +146,7 @@
     * Add a hover animation in image
     */
     $(document).on({
-        mouseenter: function(){	
+        mouseenter: function(){ 
             var obj = $(this).closest('.featured-meta-box');
             obj.find('.dfiImg').stop(true, true).animate({ opacity: 0.3 }, 300 );
             obj.find('.hasFeaturedImage').fadeIn(200);
