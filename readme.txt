@@ -13,6 +13,10 @@ Dynamically adds multiple featured image (post thumbnail) functionality to posts
 == Description ==
 Dynamically adds multiple featured image or multiple post thumbnail functionality to your page, posts and custom post types. This plugin provides you an interface to add any number of featured image as you want without writing a single code. These dynamic featured images can then be collected by the various theme functions.
 
+> Attention! If you upgrade from 3.0.1 to 3.1.0 you need to re-enter all images  
+> or manage image url in the database manually. The plugins find the image folder  
+> automatically from ver. 3.1.0.
+
 **Overview**  
 Dynamic Featured Image enables the option to have MULTIPLE featured images within a post or page. 
 This is especially helpful when you use other plugins, post thumbnails or sliders that use featured images. 
@@ -154,7 +158,8 @@ Please feel free to report any bug found at https://github.com/ankitpokhrel/Dyna
 
 == Upgrade Notice ==
 == 3.1.0 ==
-This version has some bug fix and code quality improvement.
+This version has some bug fix and code quality improvement. You may need to change database value manually because the plugin finds the uplod folder
+automatically from now on.
 
 = 3.0.1 =
 This version has fixed various JSLint issues.
