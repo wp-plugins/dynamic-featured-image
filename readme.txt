@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: dynamic featured image, featured image, post thumbnail, dynamic post thumbnail, multiple featured image, multiple post thumbnail
 Requires at least: 3.5
 Tested up to: 3.9.1
-Stable tag: 3.1.7
+Stable tag: 3.1.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -108,6 +108,10 @@ Please feel free to report any bug found at https://github.com/ankitpokhrel/Dyna
 3. Add new featured image box.
 
 == Changelog ==
+= 3.1.9 =
+* Changed the scope of function get_image_id()
+* Fixed typo in Nepali translation.
+
 = 3.1.7 =
 * Added Nepali, Swedish, Hebrew, Serbian, Croation and Bosnian languages.
 * Fixed bug on issue #25 solution.
@@ -165,6 +169,9 @@ Please feel free to report any bug found at https://github.com/ankitpokhrel/Dyna
 * Fixed some minor issues.
 
 == Upgrade Notice ==
+== 3.1.9 ==
+This version has some bug fix over ver. 3.1.7
+
 == 3.1.7 ==
 This version has translation in 6 different languages, bug fix on edited image and code quality improvement.
 
