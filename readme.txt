@@ -3,8 +3,8 @@ Contributors: ankitpokhrel, cfoellmann
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=J9FVY3ESPPD58
 Tags: dynamic featured image, featured image, post thumbnail, dynamic post thumbnail, multiple featured image, multiple post thumbnail
 Requires at least: 3.5
-Tested up to: 4.0
-Stable tag: 3.1.13
+Tested up to: 4.1
+Stable tag: 3.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -111,6 +111,12 @@ Please feel free to report any bug found at https://github.com/ankitpokhrel/Dyna
 3. Add new featured image box.
 
 == Changelog ==
+= 3.3.0 =
+* Fixed Invalid image path returned - Pull Request #35
+* Added dfi_post_type_user_filter to disable metabox in post types.
+* Added filter to change metabox title.
+* Some minor fixes.
+
 = 3.1.13 =
 * Added post types filter - Pull Request #32 
 * Fixed issue #33 - Incorrect data return when no image attached.
@@ -179,6 +185,9 @@ Please feel free to report any bug found at https://github.com/ankitpokhrel/Dyna
 * Fixed some minor issues.
 
 == Upgrade Notice ==
+== 3.3.0 =
+This version has multisite url bug fix and has added various usful filters.
+
 == 3.1.13 =
 This version has some major bug fix over ver. 3.1.9
 
