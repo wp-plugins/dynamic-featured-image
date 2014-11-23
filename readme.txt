@@ -13,9 +13,7 @@ Dynamically adds multiple featured image (post thumbnail) functionality to posts
 == Description ==
 Dynamically adds multiple featured image or multiple post thumbnail functionality to your page, posts and custom post types. This plugin provides you an interface to add any number of featured image as you want without writing a single code. These dynamic featured images can then be collected by the various theme functions.
 
-> Attention! If you upgrade from 3.0.1 to a newer version you will need to re-enter all  
-> images or manage image url in the database manually. The plugins find the image  
-> folder automatically from ver. 3.1.0.
+> All the support of the Dynamic Featured Image plugin will now be provided from within [this support forum](http://ankitpokhrel.com.np/blog/forums "Dynamic Featured Image Support Forum"). Please do not post in default WordPress support forum as the questions there is unlikely to be answered.
 
 **Overview**  
 Dynamic Featured Image enables the option to have MULTIPLE featured images within a post or page. 
@@ -35,12 +33,12 @@ array
     array
       'thumb' => string 'http://your_site/upload_path/yourSelectedImage.jpg' (length=50)
       'full' => string 'http://your_site/upload_path/yourSelectedImage_fullSize.jpg' (length=69)
-	    'attachment_id' => string '197' (length=3)
+      'attachment_id' => string '197' (length=3)
   1 => 
     array
       'thumb' => string 'http://your_site/upload_path/yourSelectedImage.jpg' (length=50)
       'full' => string 'http://your_site/upload_path/yourSelectedImage_fullSize.jpg' (length=69)
-	    'attachment_id' => string '198' (length=3)
+      'attachment_id' => string '198' (length=3)
   2 => ...
 `
 
