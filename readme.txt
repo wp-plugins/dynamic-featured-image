@@ -17,12 +17,12 @@ Dynamically adds multiple featured image or multiple post thumbnail functionalit
 
 > Users looking for more timely/in-depth support and extended features are encouraged to check out [Dynamic Featured Image PRO](http://ankitpokhrel.com.np/blog/downloads/dynamic-featured-image-pro/ "Dynamic Featured Image PRO").
 
-> FEATURES OF PRO VERSION  
-  * Settings Page to control various settings.  
-  * Shortcodes to make your life easier.  
-  * Quick support. Priority in support forum.  
-  * Chat support available.  
-  * Access to more advance features and future updates for free.  
+> **FEATURES OF PRO VERSION**  
+  - Settings Page to control various settings.  
+  - Shortcodes to make your life easier.  
+  - Pro-level support on all forums, including the free forum.  
+  - Dedicated email and chat support.  
+  - Access to more advance features and future updates for free.  
 
 > [Learn more &raquo;](http://ankitpokhrel.com.np/blog/downloads/dynamic-featured-image-pro/ "Dynamic Featured Image PRO")
 
