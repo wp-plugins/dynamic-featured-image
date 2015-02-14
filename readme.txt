@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: dynamic featured image, featured image, post thumbnail, dynamic post thumbnail, multiple featured image, multiple post thumbnail
 Requires at least: 3.5
 Tested up to: 4.1
-Stable tag: 3.3.0
+Stable tag: 3.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,12 +44,12 @@ array
     array
       'thumb' => string 'http://your_site/upload_path/yourSelectedImage.jpg' (length=50)
       'full' => string 'http://your_site/upload_path/yourSelectedImage_fullSize.jpg' (length=69)
-	    'attachment_id' => string '197' (length=3)
+      'attachment_id' => string '197' (length=3)
   1 => 
     array
       'thumb' => string 'http://your_site/upload_path/yourSelectedImage.jpg' (length=50)
       'full' => string 'http://your_site/upload_path/yourSelectedImage_fullSize.jpg' (length=69)
-	    'attachment_id' => string '198' (length=3)
+      'attachment_id' => string '198' (length=3)
   2 => ...
 `
 
@@ -120,6 +120,9 @@ Please feel free to report any bug found at https://github.com/ankitpokhrel/Dyna
 3. Add new featured image box.
 
 == Changelog ==
+= 3.3.1 =
+* Increased code quality
+
 = 3.3.0 =
 * Fixed Invalid image path returned - Pull Request #35
 * Added dfi_post_type_user_filter to disable metabox in post types.
@@ -194,6 +197,9 @@ Please feel free to report any bug found at https://github.com/ankitpokhrel/Dyna
 * Fixed some minor issues.
 
 == Upgrade Notice ==
+= 3.3.1 =
+This version has no functionality change.
+
 = 3.3.0 =
 This version has multisite url bug fix and has added various useful filters.
 
