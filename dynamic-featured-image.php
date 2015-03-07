@@ -3,7 +3,7 @@
  Plugin Name: Dynamic Featured Image
  Plugin URI: http://wordpress.org/plugins/dynamic-featured-image/
  Description: Dynamically adds multiple featured image or post thumbnail functionality to your posts, pages and custom post types.
- Version: 3.3.1
+ Version: 3.4.0
  Author: Ankit Pokhrel
  Author URI: http://ankitpokhrel.com.np
  License: GPL2 or later
@@ -48,7 +48,7 @@ class Dynamic_Featured_Image
 	 *
 	 * @since 3.0.0
 	 */
-	const VERSION = '3.3.1';
+	const VERSION = '3.4.0';
 	private $upload_dir, $upload_url, $db, $textDomain, $_metabox_title, $_userFilter;
 
 	/**
@@ -75,6 +75,10 @@ class Dynamic_Featured_Image
 
 		//handle ajax request
 		add_action( 'wp_ajax_dfiMetaBox_callback', array( $this, 'ajax_callback' ) );
+
+		//media uploader custom fields
+		add_filter( 'attachment_fields_to_edit', array($this, 'media_attachment_custom_fields'), 10, 2 );
+		add_filter( 'attachment_fields_to_save', array($this, 'media_attachment_custom_fields_save'), 10, 2 );
 
 		//get the site protocol
 		$protocol = ( (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') ||
@@ -151,7 +155,7 @@ class Dynamic_Featured_Image
 		global $post;
 
 		//make metabox title dynamic
-		$this->_metabox_title =  apply_filters('dfi_set_metabox_title', "Featured Image");
+		$this->_metabox_title =  apply_filters('dfi_set_metabox_title', __("Featured Image"));
 
 		$featuredData = get_post_meta( $post->ID, 'dfiFeatured', true );
 		$totalFeatured = count( $featuredData );
@@ -388,6 +392,48 @@ class Dynamic_Featured_Image
 		return $classes;
 
 	} // END add_metabox_classes()
+
+	/**
+	 * Add custom fields in media uploader
+	 *
+	 * @since  3.4.0
+	 * 
+	 * @param $form_fields Array Fields to include in media attachment form
+	 * @param $post Array Post data
+	 * 
+	 * @return Array
+	 */
+	public function media_attachment_custom_fields( $form_fields, $post )
+	{
+		$form_fields['dfi-link-to-image'] = array(
+			'label' => _('Link to Image'),
+			'input' => 'text',
+			'value' => get_post_meta( $post->ID, '_dfi_link_to_image', true )
+		);
+
+		return $form_fields;
+
+	} // END media_attachment_custom_fields()
+
+	/**
+	 * Save values of media uploader custom fields
+	 *
+	 * @since 3.4.0
+	 *
+	 * @param $post Array The post data for database
+	 * @param $attachment Array Attachment fields from $_POST form
+	 * 
+	 * @return Array
+	 */
+	public function media_attachment_custom_fields_save( $post, $attachment ) 
+	{
+		if( isset( $attachment['dfi-link-to-image'] ) ) {
+			update_post_meta( $post['ID'], '_dfi_link_to_image', $attachment['dfi-link-to-image'] );
+		}
+		
+		return $post;
+
+	} // END media_attachment_custom_fields_save()
 
 	/**
 	 * Update featured images in the database
@@ -676,6 +722,22 @@ class Dynamic_Featured_Image
 		return self::execute_query( $this->db->prepare( "SELECT post_content FROM " . $this->db->posts . " WHERE ID = %d", $attachment_id ) );
 
 	} // END get_image_description_by_id()
+
+	/**
+	 * Get link to image
+	 *
+	 * @since 3.4.0
+	 * @access public
+	 *
+	 * @param  Integer $attachment_id attachment id of an image
+	 *
+	 * @return string|null
+	 */
+	public function get_link_to_image($attachment_id) 
+	{
+		return get_post_meta( $attachment_id, '_dfi_link_to_image', true );
+
+	} // END get_link_to_image()
 
 	/**
 	 * Get all attachment ids of the post

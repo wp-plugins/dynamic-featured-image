@@ -3,8 +3,8 @@ Contributors: ankitpokhrel, cfoellmann
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=J9FVY3ESPPD58
 Tags: dynamic featured image, featured image, post thumbnail, dynamic post thumbnail, multiple featured image, multiple post thumbnail
 Requires at least: 3.5
-Tested up to: 4.1
-Stable tag: 3.3.1
+Tested up to: 4.1.1
+Stable tag: 3.4.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,6 +20,7 @@ Dynamically adds multiple featured image or multiple post thumbnail functionalit
 > **FEATURES OF PRO VERSION**  
   - Settings Page to control various settings.  
   - Shortcodes to make your life easier.  
+  - Featured Image Slider.
   - Pro-level support on all forums, including the free forum.  
   - Dedicated email and chat support.  
   - Access to more advance features and future updates for free.  
@@ -63,10 +64,6 @@ You can use `Network Activate` to activate plugin for all sites on a single inst
 Simple `Activate` activates for the site you are currently on. These will be permitted to be activated or deactivated on ANY blog.
 
 While deleting the plugin from the `Network` be sure that the plugin is deactive in all installation of your WordPress network.
-
-**Remote Image URL Info**  
-You can add the image using the remote image url but various helper functions provided may/may not work for the image from remote url.
-The attachment id for the remote image will always be `null`.
 
 **Contribute**  
 If you'd like to check out the code and contribute, join us on [Github](https://github.com/ankitpokhrel/Dynamic-Featured-Image "View this plugin in github"). 
@@ -120,6 +117,11 @@ Please feel free to report any bug found at https://github.com/ankitpokhrel/Dyna
 3. Add new featured image box.
 
 == Changelog ==
+= 3.4.0 =
+* Added _Link to Image_ field.
+* Portuguese Brazilian translation (Thanks to @bruno-rodrigues).
+* And some minor refactorings.
+
 = 3.3.1 =
 * Increased code quality
 
@@ -197,6 +199,9 @@ Please feel free to report any bug found at https://github.com/ankitpokhrel/Dyna
 * Fixed some minor issues.
 
 == Upgrade Notice ==
+= 3.4.0 =
+Now with ability to add custom fields in media uploader for features targeted for future.
+
 = 3.3.1 =
 This version has no functionality change.
 
