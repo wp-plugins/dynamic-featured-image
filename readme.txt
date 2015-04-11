@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: dynamic featured image, featured image, post thumbnail, dynamic post thumbnail, multiple featured image, multiple post thumbnail
 Requires at least: 3.5
 Tested up to: 4.1.1
-Stable tag: 3.4.0
+Stable tag: 3.5.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,7 +21,7 @@ Dynamically adds multiple featured image or multiple post thumbnail functionalit
   - Settings Page to control various settings.  
   - Shortcodes to make your life easier.  
   - Featured Image Slider.
-  - Pro-level support on all forums, including the free forum.  
+  - Priority support on all forums, including the free forum.  
   - Dedicated email and chat support.  
   - Access to more advance features and future updates for free.  
 
@@ -117,6 +117,13 @@ Please feel free to report any bug found at https://github.com/ankitpokhrel/Dyna
 3. Add new featured image box.
 
 == Changelog ==
+= 3.5.0 =
+* Unit Tests.
+* Added support for github updater. Issue #44
+* Fix get_the_ID issue in WordPress below 4.0.
+* Remove extra quotation mark that was making the html invalid.
+* Added uninstall script.
+
 = 3.4.0 =
 * Added _Link to Image_ field.
 * Portuguese Brazilian translation (Thanks to @bruno-rodrigues).
@@ -199,6 +206,9 @@ Please feel free to report any bug found at https://github.com/ankitpokhrel/Dyna
 * Fixed some minor issues.
 
 == Upgrade Notice ==
+= 3.5.0 =
+* Unit tests and bug fixes.
+
 = 3.4.0 =
 Now with ability to add custom fields in media uploader for features targeted for future.
 
