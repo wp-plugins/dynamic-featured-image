@@ -18,12 +18,13 @@ Dynamically adds multiple featured image or multiple post thumbnail functionalit
 > Users looking for more timely/in-depth support and extended features are encouraged to check out [Dynamic Featured Image PRO](http://ankitpokhrel.com.np/blog/downloads/dynamic-featured-image-pro/ "Dynamic Featured Image PRO").
 
 > **FEATURES OF PRO VERSION**  
-  - Settings Page to control various settings.  
-  - Shortcodes to make your life easier.  
-  - Featured Image Slider.
-  - Priority support on all forums, including the free forum.  
-  - Dedicated email and chat support.  
-  - Access to more advance features and future updates for free.  
+  – Settings Page to control the visibility of DFI metabox.  
+  – Custom title settings to change DFI metabox title as per your need.  
+  – Powerful shortcodes to make your life easier.  
+  – Featured image slider.  
+  – Pro-level support on all forums, including the free forum.  
+  – Dedicated email and chat support.  
+  – Access to more advance features and future updates for free.  
 
 > [Learn more &raquo;](http://ankitpokhrel.com.np/blog/downloads/dynamic-featured-image-pro/ "Dynamic Featured Image PRO")
 
@@ -87,29 +88,25 @@ iv. [Resetting the plugins folder](http://www.google.com/url?q=http%3A%2F%2Fcode
 = 2. There is no additional image on the page when I save it or publish it? =
 This happens when there is any problem in saving you post or page properly. For example, if you try to save or publish the post without the post title the featured images may not be saved properly.
 
-= 3. Can i set the image from remote url? =
+= 3. Can I set the image from remote url? =
 If you need to add images from the remote url you need to switch back to ver. 2.0.2 . There is no such feature in ver. 3.0.0 and above.
 
 Note: If you are using remote url to use the feature image, the helper functions may not work properly. 
 Alt, caption and title attribute for these images cannot be retrieved using helper functions. `NULL` is returned instead.
 
-= 4. I am seeing a broken image icon when setting the second feature image? [ for ver. 2.0.2 and below ] =
-Some plugins like `Regenerate Thumbnails` changes the default image format in media uploader from `File URL` to `Attachment Post URL`. 
-Make sure you click on `File URL` under `Link URL` section before clicking `Insert Into Post`.
-
-= 5. I cannot add or change secondary featured images after update? =
+= 4. I cannot add or change secondary featured images after update? =
 This usually happens because of cache. Clear all your cache and try again if you are having this problem. If you still have such problem you can get help through support forum.
 
-= 6. Is it Possible to Make DFI Work Only for Certain Post Types? =
+= 5. Is it possible to make DFI work only for certain post types? =
 Yes! It is easily possible from version 3.1.13. A filter is added in the recent version for this purpose. Refer [this thread](http://ankitpokhrel.com.np/blog/is-it-possible-to-make-dfi-work-only-for-certain-post-types/) for mor info.
 
-= 7. Other problems or questions? =
+= 6. Other problems or questions? =
 Other problems? Don't forget to check the [blog](http://ankitpokhrel.com.np/blog/category/dynamic-featured-image/) and learn to create some exciting things using DFI.
 
 Please use [support forum](http://wordpress.org/support/plugin/dynamic-featured-image) first if you have any question or queries about the project. 
-If you don't receive any help in support forum then you can directly contact me at `ankitpokhrel [at] gmail [dot] com`. Please atleast wait for 48hrs before sending another request.
+If you don't receive any help in support forum then you can directly contact me at `info [at] ankitpokhrel.com.np`. Please atleast wait for 48hrs before sending another request.
 
-Please feel free to report any bug found at https://github.com/ankitpokhrel/Dynamic-Featured-Image/ or `ankitpokhrel [at] gmail [dot] com`.
+Please feel free to report any bug found at https://github.com/ankitpokhrel/Dynamic-Featured-Image/ or `info [at] ankitpokhrel.com.np`.
 
 == Screenshots == 
 1. New featured image box.
