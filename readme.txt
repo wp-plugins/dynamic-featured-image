@@ -13,9 +13,6 @@ Dynamically adds multiple featured image (post thumbnail) functionality to posts
 == Description ==
 Dynamically adds multiple featured image or multiple post thumbnail functionality to your page, posts and custom post types. This plugin provides you an interface to add any number of featured image as you want without writing a single line of code. These featured images can then be collected by the various theme functions.
 
-> **Dynamic Featured Image PRO Giveaway**  
-> We are giving away Dynamic Featured Image PRO Free for a Week. [Learn more...](http://ankitpokhrel.com.np/blog/downloads/dynamic-featured-image-pro/ "Dynamic Featured Image PRO")
-
 > **A NOTE ABOUT SUPPORT:** We’re here to help troubleshoot bugs, but please don't set expectations early as the support forums at WordPress.org are only checked once a week. All the support of the Dynamic Featured Image plugin will now be provided from within [this support forum](http://ankitpokhrel.com.np/blog/forums/forum/dynamic-featured-image-free-version/ "Dynamic Featured Image Support Forum").
 
 > Users looking for more timely/in-depth support and extended features are encouraged to check out [Dynamic Featured Image PRO](http://ankitpokhrel.com.np/blog/downloads/dynamic-featured-image-pro/ "Dynamic Featured Image PRO").
