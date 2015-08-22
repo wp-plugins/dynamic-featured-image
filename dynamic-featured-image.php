@@ -3,7 +3,7 @@
  Plugin Name: Dynamic Featured Image
  Plugin URI: http://wordpress.org/plugins/dynamic-featured-image/
  Description: Dynamically adds multiple featured image or post thumbnail functionality to your posts, pages and custom post types.
- Version: 3.5.0
+ Version: 3.5.1
  Author: Ankit Pokhrel
  Author URI: http://ankitpokhrel.com.np
  License: GPL2 or later
@@ -93,13 +93,15 @@ class Dynamic_Featured_Image
 		//handle ajax request
 		add_action( 'wp_ajax_dfiMetaBox_callback', array( $this, 'ajax_callback' ) );
 
+		//add action links
+		add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), array($this, 'dfi_action_links') );
+
 		//media uploader custom fields
 		add_filter( 'attachment_fields_to_edit', array($this, 'media_attachment_custom_fields'), 10, 2 );
 		add_filter( 'attachment_fields_to_save', array($this, 'media_attachment_custom_fields_save'), 10, 2 );
 
 		//get the site protocol
-		$protocol = ( (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') ||
-						(!empty($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] == 443) ) ? "https://" : "http://";
+		$protocol = $this->__get_protocol();
 
 		$this->__upload_dir = wp_upload_dir();
 		$this->__upload_url = preg_replace('#^https?://#', '', $this->__upload_dir['baseurl']);
@@ -114,6 +116,20 @@ class Dynamic_Featured_Image
 		$this->__db = $wpdb;
 
 	} // END __construct()
+
+	/**
+	 * Return site protocol
+	 *
+	 * @since 3.5.1
+	 * @access public
+	 * 
+	 * @return string
+	 */
+	private function __get_protocol()
+	{
+		return ( (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') ||
+				(!empty($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] == 443) ) ? "https://" : "http://";
+	}
 
 	/**
 	 * Add required admin scripts
@@ -152,6 +168,28 @@ class Dynamic_Featured_Image
 		wp_enqueue_script( 'scripts-dfi' );
 
 	} // END initialize_components()
+
+	/**
+	 * Add upgrade link
+	 *
+	 * @access public
+	 * @since  3.5.1
+	 * @action plugin_action_links
+	 *
+	 * @codeCoverageIgnore
+	 *
+	 * @param  array $links Action links
+	 * @return array
+	 */
+	public function dfi_action_links($links)
+	{
+		$upgrade_link = array(
+				'<a href="http://ankitpokhrel.com.np/blog/downloads/dynamic-featured-image-pro/" target="_blank">Upgrade to Premium</a>'
+			);
+
+		return array_merge( $links, $upgrade_link );
+
+	} // END dfi_action_links()
 
 	/**
 	 * Add featured meta boxes dynamically
@@ -525,7 +563,6 @@ class Dynamic_Featured_Image
 	 *
 	 * @since 2.0.0
 	 * @access public
-	 * @ignore
 	 *
 	 * @return Void
 	 */
